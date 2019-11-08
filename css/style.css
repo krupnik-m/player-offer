@@ -24,7 +24,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  min-width: 390px; }
   @media only screen and (max-width: 75em) {
     html {
       font-size: 60%; } }
@@ -77,12 +78,6 @@ body {
   font-size: 22px;
   line-height: 1.29;
   color: #fff; }
-  @media only screen and (max-width: 75em) {
-    body {
-      font-size: 18px; } }
-  @media only screen and (max-width: 56.25em) {
-    body {
-      font-size: 5px; } }
 
 h1 {
   font-size: 3.5rem;
@@ -129,14 +124,14 @@ a, li {
 .logo-image {
   position: absolute;
   display: block;
-  width: 12vw;
+  width: 12%;
   top: 3%;
-  left: calc(50vw - 6vw); }
+  left: calc(50% - 6%); }
   @media only screen and (max-width: 56.25em) {
     .logo-image {
       top: 2.5%;
-      width: 20vw;
-      left: calc(50vw - 10vw); } }
+      width: 20%;
+      left: calc(50% - 10%); } }
 
 .title-image {
   display: block;
@@ -145,17 +140,24 @@ a, li {
 
 .button.header-button {
   position: absolute;
-  width: 10vw;
+  width: 10%;
   top: 69%;
   padding: 0;
-  left: calc(50vw - 5vw);
+  left: calc(50% - 5%);
   font-size: 1.9rem; }
+  @media only screen and (max-width: 75em) {
+    .button.header-button {
+      top: 67.5%;
+      font-size: 1.7rem; } }
   @media only screen and (max-width: 56.25em) {
     .button.header-button {
       top: 62%;
-      width: 22vw;
-      left: calc(50vw - 11vw);
+      width: 24%;
+      left: calc(50% - 12%);
       font-size: 2rem; } }
+  @media only screen and (max-width: 480px) {
+    .button.header-button {
+      font-size: 1.5rem; } }
 
 .container_ {
   max-width: 1500px;
@@ -176,7 +178,12 @@ a, li {
         color: #FF0068;
         display: inline-block;
         width: 1em;
-        margin-left: -0.5em; }
+        margin-left: -1.1em;
+        position: absolute; }
+      .container_ ul li.white {
+        margin-left: 3.5rem; }
+        .container_ ul li.white:before {
+          color: #fff; }
   .container_ strong {
     font-weight: 900; }
   .container_ .center-block {

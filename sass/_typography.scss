@@ -4,14 +4,6 @@ body {
   font-size: $default-font-size;
   line-height: 1.29;
   color: $color-white;
-
-    @include respond(tab-land) { // width < 1200?
-        font-size: $tab-font-size;
-    }
-
-    @include respond(tab-port) { // width < 900?
-        font-size: $mobile-font-size;
-    }
 }
 
 h1 {
